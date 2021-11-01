@@ -5,7 +5,10 @@ plugins {
 
 android {
     compileSdk 31
-
+// here add buildFeatures to link XML with temp.
+    buildFeatures {
+        viewBinding true
+    }
     defaultConfig {
         applicationId "com.example.registrationcardproject"
         minSdk 26

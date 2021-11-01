@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/App"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
@@ -16,76 +17,71 @@
 
 
     <EditText
-        android:id="@+id/Textbox"
+        android:id="@+id/inputName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="name"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/inputName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
-
+        tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/inputEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:hint="Email Address"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/inputEmail"
         android:inputType="textEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:ignore="MissingConstraints,TextFields"
-        tools:layout_editor_absoluteX="0dp" />
-
-
-
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputName"
+        tools:ignore="MissingConstraints,TextFields" />
 
     <EditText
 
+        android:id="@+id/inputPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
-        android:hint="Password"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/inputPassword"
         android:inputType="textPassword"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:ignore="MissingConstraints,TextFields"
-        tools:layout_editor_absoluteX="0dp" />
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail"
+        tools:ignore="MissingConstraints,TextFields" />
 
     <EditText
 
+        android:id="@+id/inputRepassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="225dp"
-        android:hint="re_Password"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/inputRe_password"
         android:inputType="textPassword"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:ignore="MissingConstraints,TextFields"
-        tools:layout_editor_absoluteX="0dp" />
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputPassword"
+        tools:ignore="MissingConstraints,TextFields" />
 
     <EditText
 
+        android:id="@+id/inputBarthday"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="280dp"
-        android:hint="Barthday"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/inputBarthday"
         android:inputType="date"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:ignore="MissingConstraints,TextFields"
-        tools:layout_editor_absoluteX="0dp" />
-
-
-    <EditText
-
-        android:id="@+id/editText2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="320dp"
-        android:hint="Gender"
-        android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:ignore="MissingConstraints,TextFields"
-        tools:layout_editor_absoluteX="0dp" />
-
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputRepassword"
+        tools:ignore="MissingConstraints,TextFields" />
 
     <Button
         android:id="@+id/Registration"
@@ -93,12 +89,45 @@
         android:layout_height="wrap_content"
 
         android:layout_gravity="center"
+        android:layout_marginStart="120dp"
         android:layout_marginTop="44dp"
-        android:text="Registration"
+        android:text="@string/Registration"
         android:textAllCaps="false"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="144dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        tools:ignore="MissingConstraints" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="304dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputBarthday">
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/male" />
+
+        <RadioButton
+            android:id="@+id/Female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Female" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/viewInfo"
+        android:layout_width="298dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="44dp"
+        android:hint="@string/viewInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Registration" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
