@@ -29,11 +29,11 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        val inputName = Binding.inputName.text.toString()
-        val inputPass1 = Binding.inputPassword.text.toString()
-        val inputPass2 = Binding.inputRepassword.text.toString()
-        val inputBdate = Binding.inputBarthday.text.toString()
-        var Email = Binding.inputEmail.text.toString()
+        val inputName = Binding.inputName1.text.toString()
+        val inputPass1 = Binding.inputPassword1.text.toString()
+        val inputPass2 = Binding.inputRepassword1.text.toString()
+        val inputBdate = Binding.inputBarthday1.text.toString()
+        var Email = Binding.inputEmail1.text.toString()
         var emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
 
         val Gender = when (Binding.radioGroup.checkedRadioButtonId) {
@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
     }  // end Is Null Info
 
     private fun IsEmail() {
-        var Email = Binding.inputEmail.text.toString()
+        var Email = Binding.inputEmail1.text.toString()
         var emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
 
         if (Email.trim { it <= ' ' }.matches(emailPattern.toRegex()) == false) {
